@@ -5,13 +5,16 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 0
+    path: Assets/ExampleAssets/Scenes/SampleScene.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
     path: Assets/Scenes/Roll-a-Ball-AR.unity
-    guid: 6bdce89659816455b9f906fc62d19910
+    guid: 8dcb5350a3dae904e8ac796323e36404
   m_configObjects:
     Unity.XR.WindowsMR.Settings: {fileID: 11400000, guid: 744b813df90924c169af73489b8325de,
       type: 2}
-    UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: f9e5ea49529063245bd3fce3ec58f2a7,
+    UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 17ba2844be92a7844af6393df5ffe122,
       type: 2}
     UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: de8a8e4f987434338a4b1062feb8d069,
       type: 2}

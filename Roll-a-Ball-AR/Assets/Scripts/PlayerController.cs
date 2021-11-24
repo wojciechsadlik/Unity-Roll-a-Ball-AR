@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class PlayerController : MonoBehaviour
 {
     public float speed;
+    public float jumpForceScaler;
     public Joystick joystick;
     public Button jumpButton;
     //public Text countText;
@@ -39,7 +40,7 @@ public class PlayerController : MonoBehaviour
 
         if (jump)
         {
-            rb.AddForce(Vector3.up * speed * 0.5f, ForceMode.Impulse);
+            rb.AddForce(Vector3.up * speed * jumpForceScaler, ForceMode.Impulse);
             jump = false;
             canJump = false;
         }

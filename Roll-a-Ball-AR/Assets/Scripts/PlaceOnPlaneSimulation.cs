@@ -22,8 +22,6 @@ public class PlaceOnPlaneSimulation : MonoBehaviour
     /// </summary>
     public GameObject spawnedObject { get; private set; }
 
-    private Camera camera;
-
     bool TryGetTouchPosition(out Vector2 touchPosition)
     {
         //if (Input.touchCount > 0)
@@ -32,7 +30,7 @@ public class PlaceOnPlaneSimulation : MonoBehaviour
         //    return true;
         //}
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButton(0))
         {
             touchPosition = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
             return true;
@@ -42,33 +40,25 @@ public class PlaceOnPlaneSimulation : MonoBehaviour
         return false;
     }
 
-    private void Start()
-    {
-        camera = GetComponent<Camera>();
-    }
-
     // Update is called once per frame
     void Update()
     {
         if (!TryGetTouchPosition(out Vector2 touchPosition))
             return;
 
-        Ray ray = camera.ScreenPointToRay(touchPosition);
+        Ray ray = Camera.main.ScreenPointToRay(touchPosition);
 
         if (Physics.Raycast(ray, out RaycastHit hit))
         {
             // Raycast hits are sorted by distance, so the first one
             // will be the closest hit.
-            var hitPose = hit.point;
+            Pose hitPose = new Pose(hit.point, m_PlacedPrefab.transform.rotation);
+            hitPose.position += Vector3.up * 0.08f;
 
             if (spawnedObject == null)
             {
-                spawnedObject = Instantiate(m_PlacedPrefab, hitPose, m_PlacedPrefab.transform.rotation);
+                spawnedObject = Instantiate(m_PlacedPrefab, hitPose.position, hitPose.rotation);
                 spawnedObject.SetActive(true);
-            }
-            else
-            {
-                spawnedObject.transform.position = hitPose;
             }
         }
     }

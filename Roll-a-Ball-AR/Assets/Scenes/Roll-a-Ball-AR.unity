@@ -195,6 +195,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6333825818508211891, guid: 1f6ea0eb407fb3e40abdf30db2f0819f,
+        type: 3}
+      propertyPath: joystick
+      value: 
+      objectReference: {fileID: 489048158}
+    - target: {fileID: 6333825818508211891, guid: 1f6ea0eb407fb3e40abdf30db2f0819f,
+        type: 3}
+      propertyPath: jumpButton
+      value: 
+      objectReference: {fileID: 1822474897}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1f6ea0eb407fb3e40abdf30db2f0819f, type: 3}
 --- !u!1 &254410139 stripped
@@ -328,6 +338,18 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 489048156}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &489048158 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2929252283123773951, guid: aaa2c939c0359ac4dbce3f49e8b90252,
+    type: 3}
+  m_PrefabInstance: {fileID: 489048156}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45977bbae16431c46a013576a1aea384, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &831897511
 GameObject:
   m_ObjectHideFlags: 0

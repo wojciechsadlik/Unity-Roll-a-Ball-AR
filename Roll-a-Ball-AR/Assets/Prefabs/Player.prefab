@@ -125,7 +125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0095dc9fcef1e144abd1044cd367d328, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1.5
+  speed: 1.75
   jumpForceScaler: 1.5
   joystick: {fileID: 0}
   jumpButton: {fileID: 0}

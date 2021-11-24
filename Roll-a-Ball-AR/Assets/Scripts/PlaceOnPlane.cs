@@ -60,15 +60,12 @@ namespace UnityEngine.XR.ARFoundation.Samples
                 // Raycast hits are sorted by distance, so the first one
                 // will be the closest hit.
                 var hitPose = s_Hits[0].pose;
+                hitPose.position += Vector3.up * 0.08f;
 
                 if (spawnedObject == null)
                 {
                     spawnedObject = Instantiate(m_PlacedPrefab, hitPose.position, hitPose.rotation);
                     spawnedObject.SetActive(true);
-                }
-                else
-                {
-                    spawnedObject.transform.position = hitPose.position;
                 }
             }
         }

@@ -12,21 +12,22 @@ public class PlayerController : MonoBehaviour
     //public Text countText;
     //public Text winText;
 
+    [SerializeField]
+    private GameLogic m_GameLogic;
+
 
     private Rigidbody rb;
-    private int count;
     private bool jump;
     private bool canJump;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        count = 0;
         jump = false;
         canJump = true;
         //winText.text = "";
-        SetCountText();
         jumpButton.onClick.AddListener(SetJump);
+        m_GameLogic.StartGame();
     }
 
     void FixedUpdate()
@@ -51,8 +52,7 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.CompareTag("Pick Up"))
         {
             other.gameObject.SetActive(false);
-            ++count;
-            SetCountText();
+            m_GameLogic.AddScore();
         }
     }
 
@@ -62,15 +62,6 @@ public class PlayerController : MonoBehaviour
         {
             canJump = true;
         }
-    }
-
-    void SetCountText()
-    {
-        //countText.text = "Count: " + count.ToString();
-        //if (count >= 10)
-        //{
-        //    winText.text = "You Win!";
-        //}
     }
 
     void SetJump()

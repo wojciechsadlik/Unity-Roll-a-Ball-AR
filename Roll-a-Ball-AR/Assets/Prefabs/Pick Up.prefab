@@ -11,16 +11,17 @@ GameObject:
   - component: {fileID: 547784552432360167}
   - component: {fileID: 547784552432360166}
   - component: {fileID: 547784552432360165}
+  - component: {fileID: -4153093339059292386}
   - component: {fileID: 547784552432360164}
   - component: {fileID: 547784552432360168}
-  - component: {fileID: -4153093339059292386}
+  - component: {fileID: 255078522}
   m_Layer: 0
   m_Name: Pick Up
   m_TagString: Pick Up
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &547784552432360167
 Transform:
   m_ObjectHideFlags: 0
@@ -34,7 +35,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 45, y: 45, z: 45}
 --- !u!33 &547784552432360166
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -84,6 +85,22 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &-4153093339059292386
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 547784552432360163}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!65 &547784552432360164
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -109,19 +126,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9fbd0cb1203a094cabef748cfad707c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!54 &-4153093339059292386
-Rigidbody:
+--- !u!114 &255078522
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 547784552432360163}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 792025d55c51d41489010bd6b0d34d84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Spawner: {fileID: 0}

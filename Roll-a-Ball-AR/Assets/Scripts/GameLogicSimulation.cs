@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class GameLogic : MonoBehaviour
+public class GameLogicSimulation : MonoBehaviour
 {
     private int m_Score;
 
     [SerializeField]
-    private RandomSpawn pickupSpawner;
+    private RandomSpawnSimulation pickupSpawner;
 
     [SerializeField]
     private Text m_ScoreText;

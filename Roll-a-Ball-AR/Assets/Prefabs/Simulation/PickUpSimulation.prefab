@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: -4153093339059292386}
   - component: {fileID: 547784552432360164}
   - component: {fileID: 547784552432360168}
-  - component: {fileID: 255078522}
+  - component: {fileID: 7968415771390726640}
   m_Layer: 0
-  m_Name: Pick Up
+  m_Name: PickUpSimulation
   m_TagString: Pick Up
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -126,7 +126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9fbd0cb1203a094cabef748cfad707c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &255078522
+--- !u!114 &7968415771390726640
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -135,7 +135,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 547784552432360163}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 792025d55c51d41489010bd6b0d34d84, type: 3}
+  m_Script: {fileID: 11500000, guid: 9264dcdc6d0bdc44f9ff370b20113a3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Spawner: {fileID: 0}

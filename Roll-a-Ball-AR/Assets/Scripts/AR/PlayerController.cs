@@ -56,6 +56,11 @@ namespace RollABallAR
                 other.gameObject.SetActive(false);
                 m_GameLogic.AddScore();
             }
+            if (other.gameObject.CompareTag("Bomb"))
+            {
+                other.gameObject.SetActive(false);
+                m_GameLogic.DeleteScore();
+            }
         }
 
         void OnCollisionEnter(Collision collision)

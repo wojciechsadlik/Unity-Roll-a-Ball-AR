@@ -11,6 +11,7 @@ namespace RollABallSimulation
 
         [SerializeField]
         private RandomSpawnSimulation pickupSpawner;
+        public RandomBombSimulation bombSpawner;
 
         [SerializeField]
         private Text m_ScoreText;
@@ -20,13 +21,17 @@ namespace RollABallSimulation
             SetScore(0);
 
             pickupSpawner.Spawn();
+            bombSpawner.Spawn();
         }
 
         public void AddScore()
         {
             SetScore(m_Score + 1);
         }
-
+        public void DeleteScore()
+        {
+            SetScore(0);
+        }
         private void SetScore(int score)
         {
             m_Score = score;

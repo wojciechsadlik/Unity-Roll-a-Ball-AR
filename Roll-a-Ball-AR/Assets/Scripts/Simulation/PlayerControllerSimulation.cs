@@ -51,11 +51,17 @@ namespace RollABallSimulation
 
         void OnTriggerEnter(Collider other)
         {
+            if (other.gameObject.CompareTag("Bomb"))
+            {
+                other.gameObject.SetActive(false);
+                m_GameLogic.DeleteScore();
+            }
             if (other.gameObject.CompareTag("Pick Up"))
             {
                 other.gameObject.SetActive(false);
                 m_GameLogic.AddScore();
             }
+            
         }
 
         void OnCollisionEnter(Collision collision)

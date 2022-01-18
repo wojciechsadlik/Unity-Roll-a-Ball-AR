@@ -11,8 +11,6 @@ namespace RollABallAR
         public float jumpForceScaler;
         public Joystick joystick;
         public Button jumpButton;
-        //public Text countText;
-        //public Text winText;
 
         [SerializeField]
         private GameLogic m_GameLogic;
@@ -27,7 +25,6 @@ namespace RollABallAR
             rb = GetComponent<Rigidbody>();
             jump = false;
             canJump = true;
-            //winText.text = "";
             jumpButton.onClick.AddListener(SetJump);
             m_GameLogic.StartGame();
         }

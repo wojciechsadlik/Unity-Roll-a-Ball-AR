@@ -27,12 +27,6 @@ namespace RollABallSimulation
 
         bool TryGetTouchPosition(out Vector2 touchPosition)
         {
-            //if (Input.touchCount > 0)
-            //{
-            //    touchPosition = Input.GetTouch(0).position;
-            //    return true;
-            //}
-
             if (Input.GetMouseButton(0))
             {
                 touchPosition = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
@@ -53,8 +47,6 @@ namespace RollABallSimulation
 
             if (Physics.Raycast(ray, out RaycastHit hit))
             {
-                // Raycast hits are sorted by distance, so the first one
-                // will be the closest hit.
                 Pose hitPose = new Pose(hit.point, m_PlacedPrefab.transform.rotation);
                 hitPose.position += Vector3.up * 0.08f;
 

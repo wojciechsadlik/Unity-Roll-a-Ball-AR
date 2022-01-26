@@ -11,7 +11,8 @@ namespace RollABallSimulation
 
         [SerializeField]
         private RandomSpawnSimulation pickupSpawner;
-        public RandomBombSimulation bombSpawner;
+        [SerializeField]
+        private RandomBombSimulation bombSpawner;
 
         [SerializeField]
         private Text m_ScoreText;

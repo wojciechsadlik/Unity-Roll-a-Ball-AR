@@ -7,12 +7,12 @@ namespace RollABallAR
     public class RespawnBomb : MonoBehaviour
     {
         [SerializeField]
-        private RandomBombSpawner m_Spawner;
+        private RandomBombSpawner m_RandomBombSpawner;
 
         private void OnDisable()
         {
-            if (m_Spawner != null)
-                m_Spawner.SpawnBomb(gameObject);
+            if (m_RandomBombSpawner != null)
+                m_RandomBombSpawner.SpawnBomb(gameObject);
         }
     }
 

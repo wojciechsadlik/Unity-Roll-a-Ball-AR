@@ -23,7 +23,6 @@ namespace RollABallSimulation
         /// The object instantiated as a result of a successful raycast intersection with a plane.
         /// </summary>
         public GameObject spawnedObject { get; private set; }
-        //public GameObject spawnedBomb { get; private set; }
 
         bool TryGetTouchPosition(out Vector2 touchPosition)
         {
@@ -55,11 +54,6 @@ namespace RollABallSimulation
                     spawnedObject = Instantiate(m_PlacedPrefab, hitPose.position, hitPose.rotation);
                     spawnedObject.SetActive(true);
                 }
-               /* if (spawnedBomb == null)
-                {
-                    spawnedBomb = Instantiate(m_PlacedPrefab, hitPose.position, hitPose.rotation);
-                    spawnedBomb.SetActive(true);
-                }*/
             }
         }
     }

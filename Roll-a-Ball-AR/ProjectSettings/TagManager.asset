@@ -8,6 +8,7 @@ TagManager:
   - Wall
   - Floor
   - Bomb
+  - PopupMsg
   layers:
   - Default
   - TransparentFX

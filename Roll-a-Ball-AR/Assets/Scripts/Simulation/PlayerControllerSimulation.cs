@@ -21,13 +21,13 @@ namespace RollABallSimulation
         private bool jump;
         private bool canJump;
 
-        PopupMessage popupMessage;
+        PopupMessageSimulation popupMessage;
         GameObject GameController;
 
         void Start()
         {
             GameController = GameObject.Find("GameController");
-            popupMessage = GameController.GetComponent<PopupMessage>();
+            popupMessage = GameController.GetComponent<PopupMessageSimulation>();
             popupMessage.Close();
 
             rb = GetComponent<Rigidbody>();
@@ -62,7 +62,7 @@ namespace RollABallSimulation
                 other.gameObject.SetActive(false);
                 m_GameLogic.DeleteScore();
                 
-                popupMessage = GameController.GetComponent<PopupMessage>();
+                popupMessage = GameController.GetComponent<PopupMessageSimulation>();
                 popupMessage.Open("Text", "Restart");
 
             }

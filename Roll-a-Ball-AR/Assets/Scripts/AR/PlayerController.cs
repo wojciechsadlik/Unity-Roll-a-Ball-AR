@@ -20,8 +20,15 @@ namespace RollABallAR
         private bool jump;
         private bool canJump;
 
+        PopupMessage popupMessage;
+        GameObject GameController;
+
         void Start()
         {
+            GameController = GameObject.Find("GameController");
+            popupMessage = GameController.GetComponent<PopupMessage>();
+            popupMessage.Close();
+
             rb = GetComponent<Rigidbody>();
             jump = false;
             canJump = true;
@@ -48,10 +55,14 @@ namespace RollABallAR
 
         void OnTriggerEnter(Collider other)
         {
-            if (other.gameObject.CompareTag("Pick Up"))
+            if (other.gameObject.CompareTag("Bomb"))
             {
                 other.gameObject.SetActive(false);
-                m_GameLogic.AddScore();
+                m_GameLogic.DeleteScore();
+
+                popupMessage = GameController.GetComponent<PopupMessage>();
+                popupMessage.Open("Text", "Restart");
+
             }
             if (other.gameObject.CompareTag("Bomb"))
             {

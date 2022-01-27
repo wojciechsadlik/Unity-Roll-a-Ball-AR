@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 namespace RollABallSimulation
 {
@@ -24,6 +25,9 @@ namespace RollABallSimulation
             pickupSpawner.Spawn();
             bombSpawner.Spawn();
         }
+
+
+
 
         public void AddScore()
         {
